@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Authentication</title>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+  </head>
+  <body>
+     <script>
+ setTimeout(function() {
+    document.getElementById('ele').style.display = "block";
+  }, 300);
+
+var config = {
+     apiKey: "AIzaSyC6nb8meSqn7GCC6RBVn0mlzK7kjYgEHaQ",
+     authDomain: "eduse-67584.firebaseapp.com",
+     databaseURL: "https://eduse-67584.firebaseio.com",
+     storageBucket: "eduse-67584",
+     messagingSenderId: "270069423249"
+  };
+  var defaultApp = firebase.initializeApp(config);
+
+  defaultApp.auth().onAuthStateChanged(function(user) {
+
+    if(user){
+     document.getElementById('welcome').innerHTML = "Hello,  " + user.email;
+    } else {
+      window.location = 'http://localhost:3000'
+    }
+  });
+  function signout() {
+    defaultApp.auth().signOut();
+    window.location = 'http://localhost:3000/login'
+ }
+     </script>
+    <h1 id="welcome"></h1>
+    <button style="display:none" onclick="signout()" id="ele">Sign out</button>
+  </body>
+</html>

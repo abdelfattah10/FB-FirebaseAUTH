@@ -1,0 +1,108 @@
+
+<html>
+
+<head>
+  <title>Authentication</title>
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <!--Polymer-->
+  <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="/bower_components/polymer/polymer.html">
+  <link rel="import" href="/bower_components/paper-material/paper-material.html">
+  <link rel="import" href="/bower_components/paper-button/paper-button.html">
+  <link rel="import" href="/bower_components/paper-input/paper-input.html">
+  <link rel="import" href="/bower_components/paper-styles/demo-pages.html">
+
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6nb8meSqn7GCC6RBVn0mlzK7kjYgEHaQ",
+    authDomain: "eduse-67584.firebaseapp.com",
+    databaseURL: "https://eduse-67584.firebaseio.com",
+    storageBucket: "eduse-67584",
+    messagingSenderId: "270069423249"
+  };
+    firebase.initializeApp(config);
+  </script>
+
+  <body>
+    <template is="dom-bind" id="app">
+      <paper-material elevation="1" style="padding: 2rem;">
+        <h2>Input your email and password.</h2>
+        <paper-input label="Email" value="{{email::input}}" type="text"></paper-input>
+        <paper-input label="Password" value="{{password::input}}" type="password"></paper-input>
+        <paper-button on-click="signIn">Sign In</paper-button>
+        <paper-button on-click="register">Register</paper-button>
+        <paper-button on-click="home">Home</paper-button>
+      </paper-material>
+    </template>
+
+    <script>
+      (function() {
+        var app = document.querySelector('#app');
+        app.signIn = function() {
+          var email = app.email;
+          var password = app.password;
+          if (!email || !password) {
+            alert('email and password required');
+            return console.log('email and password required');
+          }
+          // Sign in user
+          firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch(function(error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              alert(error);
+              console.log('signIn error', error);
+              // ...
+            });
+        };
+        app.register = function() {
+          var email = app.email;
+          var password = app.password;
+          if (!email || !password) {
+            alert('email and password required');
+            return console.log('email and password required');
+          }
+          // Register user
+          firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch(function(error) {
+              alert(error)
+              console.log('register error', error);
+              if (error.code === 'auth/email-already-in-use') {
+                var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+                app.signInWithGoogle()
+                  .then(function() {
+                    firebase.auth().currentUser.link(credential)
+                      .then(function(user) {
+                        console.log("Account linking success", user);
+                      }, function(error) {
+                        alert('error occured')
+                        console.log("Account linking error", error);
+                      });
+                  });
+              }
+            });
+        };
+        app.home = function() {
+          window.location = 'http://localhost:3000';
+          }
+        // Listen to auth state changes
+        firebase.auth().onAuthStateChanged(function(user) {
+          app.user = user;
+          console.log('user', user.email);
+          if(user){
+           alert('success')
+           window.location = 'http://localhost:3000/welcome';
+          }
+        });
+      })();
+    </script>
+  </body>
+
+</head>
+
+
+</html>

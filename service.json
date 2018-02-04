@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "titanium-acumen-181611",
+  "private_key_id": "27d4331bf64196a7d040181a1f7ace64ebcce37f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0Skw8VVTVYCPG\nmuA/KikHfM9x2XjLwMfOtmR7cP+ZFeIRm5Vlthqy3iJSwZlpp3KqNMpuVsOphhBr\nK6m9Wk/IyYkjINvjuuvsaL2bFIwNx1+EIDcsh6DbAK7fEHVlGVuzQLZuseKBHI52\nayoah8c5klTSK4cbV0hCuPPIv5SI8281SDMcOhcmCXoqpFdcPvn4lU4CrtTszG7m\nJ4I4LYwi46f/E0aKwlOdwA7LLMCFeoh+IlswAAW16wygRUXHHmblWoAkICkgg4ah\nAtarVSwxu2a8MXRuZeRAeLpO4SnetkNRTq5e88EefyeAAz/U+bSccJhmMQ6Hg/Ba\nb1IVfAQJAgMBAAECggEAHQq+3xUr1jdna+2049fpxg//5qoOgFvsk8rjwtLACavx\nv75dQYYlJN0NkGEpUlCr8ukQFtgZKqyy5mChNiRfJ8v3MFZxtWx95pY0vM+BhBKy\nuzjpSl4KtlyUzs/66S89i1GIUaqL/xpXhJHctWtb11VQHo7uc6QKutzKQHND/Q9c\nifCec3wrGyccyZqUkT8w6Qu5ypXoXDxGa7n3c+YDl9t4Vbd5qVbtr24DRRX7vd+4\ngEL5lkEt9AScP+bSjQ3DM7FGlKyaYz7mGvg6+QxCZl7THsyxprWFusnML1j8Lq/5\nYlaFVCk0VQ8JNo5378h1vg4zYHtY0yJx29nXsgnaxQKBgQDY7tDSYyXL1dSDwkh1\nUzUAYrK3hxQl1miHVMh9Ln2f8W7RRZH8MEHtXXZgigZonBepJyFXiNg0lrVfxckZ\nKh2dK7L3W+EKWy7c0eLJJhpBB2z8FIfibcfI1Bx1AUbH6zwp3kTEP2Zq6kTPD3mQ\nOhf55idahZqOVrYmY3dGz452PwKBgQDUwiiCc4Ron3j7uaI53tncSVz0LLRK4sW1\n21J6ewRlM0w9oln/VKSmy0rNreCnsgOKDjIr2k2RageFs+De5bHmFfv2utUNXQ09\nlmwTaAEMhFzhrf73KSiC9ddcYozjHGG6JFodd33OIn4j1BbH31optoF3IztQ3lmD\nfTI0c41DtwKBgF6TX38ZsrS3OLtozGY6LHVKklfpECOe4lt93xqUVjiQ7ZtXFVo5\nP8TYZm+YPUsGIlqgsKyVAI2M1u42MIJEFj0bfB7Tc70sG7Yx2wmPDwsizaTo3oUd\nD2jC8NUiBVXLfKNUP+6/JUufbvhG6tyyNxm/+ZBBhyxfKXJ7EtlQS+/JAoGBAM56\n2/u2hnNPCYgrYWCOgZrDbD3gwNzIdp6GiuYpS1u3zC8ox/T/vYfOVfuE2zmEjuDF\n5DUg+RS99SzyJLPN8bfd8BlEuw3sF7SErsCquBHgx4+SYJaYUCPA2VBkqFylJ8cS\nDo74b5TFbuvwomc5wXQoFj98Zs2V7QOqVjYHSrrDAoGACvYku6MrptAIb/5rcY1m\nIojfn1yvzSLtUHGf+J1dh+WebCIr3uYpZOLCbdnYWfJYy3N3OwxUTWBYyYLkuozw\nH+x3dxZCPJQYOKC1r43KS2K5v1L4TcZ7EQRwGUIp41s8TQie3rMa/13NdzF6m1ey\nxBKmVKT7Pkbve5uMhbE3kJQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "node-client@titanium-acumen-181611.iam.gserviceaccount.com",
+  "client_id": "106656331127177747738",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/node-client%40titanium-acumen-181611.iam.gserviceaccount.com"
+}
